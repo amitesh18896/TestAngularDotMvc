@@ -1,0 +1,72 @@
+/* Style the mat-card container */
+mat-card {
+  width: 300px; /* Adjust the width as needed */
+  margin: 10px;
+  border: 1px solid #e0e0e0; /* Border style */
+  transition: transform 0.2s;
+}
+
+  mat-card:hover {
+    transform: translateY(-5px);
+  }
+
+/* Style the mat-card-header */
+mat-card-header {
+  text-align: center;
+  background-color: #007BFF; /* Change the background color as desired */
+  color: #fff; /* Change the text color as desired */
+  padding: 10px;
+}
+
+/* Style the mat-card-title */
+mat-card-title {
+  font-size: 18px;
+}
+
+/* Style the mat-card-content */
+mat-card-content {
+  padding: 10px;
+}
+
+/* Style the definition list */
+dl.list {
+  list-style: none;
+  padding: 0;
+}
+
+  /* Style the definition term (dt) */
+  dl.list dt {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  /* Style the definition description (dd) */
+  dl.list dd {
+    margin-top: 5px;
+  }
+
+/* Style the mat-card-actions */
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Style the action buttons */
+button.mat-raised-button {
+  width: 100px; /* Adjust the width as needed */
+  font-weight: bold;
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+
+  /* Style the "Edit" button */
+  button.mat-raised-button[color="primary"] {
+    background-color:paleturquoise; /* Change the background color as desired */
+     color:aqua;    /* Change the text color as desired */
+  }
+
+  /* Style the "Delete" button */
+  button.mat-raised-button[color="warn"] {
+    background-color:paleturquoise; /* Change the background color as desired */
+    color:aqua; /* Change the text color as desired */
+  }

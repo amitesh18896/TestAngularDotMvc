@@ -1,0 +1,41 @@
+/* Add CSS for the container */
+/*.container {
+  margin: 20px;
+  padding: 20px;
+  background-color:paleturquoise;
+}*/
+
+/* Style the heading */
+/*h1.my-4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}*/
+
+/* Style the table */
+/*.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+  color:aqua;
+}*/
+
+/* Style table headers */
+/*.mat-header-cell {
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  text-align: left;
+  color:aquamarine;
+}*/
+
+/* Style table cells */
+/*.mat-cell {
+  padding: 10px;
+  text-align: left;
+}*/
+
+/* Style the action buttons */
+/*.mat-raised-button {
+  margin-right: 10px;
+ background-color:springgreen
+
+}*/

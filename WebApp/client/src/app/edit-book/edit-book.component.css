@@ -1,0 +1,69 @@
+/* Style the container */
+.container {
+  margin: 20px;
+  padding: 20px;
+  background-color:paleturquoise;
+}
+
+/* Style the heading */
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* Style the form container */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col-md-6 {
+  width: 100%;
+  max-width: 400px; /* Adjust the width as needed */
+}
+
+/* Style the mat-form-field and labels */
+.mat-form-field {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.mat-label {
+  font-weight: bold;
+}
+
+/* Style the matInput fields */
+input.matInput {
+  width: 100%;
+}
+
+/* Style the form buttons */
+.form-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button.mat-raised-button {
+  width: 150px; /* Adjust the width as needed */
+  font-weight: bold;
+}
+
+  /* Disable the button when the form is not valid */
+  button.mat-raised-button[disabled] {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+
+  /* Style the "Update" button */
+  button.mat-raised-button[color="primary"] {
+    background-color: #007BFF; /* Change the background color as desired */
+    color: #fff; /* Change the text color as desired */
+  }
+
+  /* Style the "Delete" button */
+  button.mat-raised-button[color="warn"] {
+    background-color: #dc3545; /* Change the background color as desired */
+    color: #fff; /* Change the text color as desired */
+  }

@@ -1,0 +1,88 @@
+<!--<div class="container">
+  <h1 class="my-12">Book List</h1>
+  <a routerLink="/create" class="btn btn-primary mb-3">Create Book</a>
+
+  <mat-progress-spinner mode="indeterminate" diameter="32" *ngIf="isLoading"></mat-progress-spinner>
+
+  <mat-table class="mat-elevation-z8" [dataSource]="books" *ngIf="!isLoading">
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+      <mat-cell *matCellDef="let book">{{ book.Title }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="author">
+      <mat-header-cell *matHeaderCellDef>Author</mat-header-cell>
+      <mat-cell *matCellDef="let book">{{ book.Author }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+      <mat-cell *matCellDef="let book">{{ book.Description }}</mat-cell>
+    </ng-container>
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+    <mat-cell *matCellDef="let book">
+   <button mat-raised-button color="primary" (click)="openDialog(book)">Edit</button>
+      <button mat-raised-button color="warn" [routerLink]="['/delete', book.Id]">Delete</button>
+    </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="['title', 'author','description', 'actions']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['title', 'author','description', 'actions'];"></mat-row>
+  </mat-table>
+
+  <mat-paginator [length]="100"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]"
+                 aria-label="Select page">
+  </mat-paginator>
+</div>-->
+
+
+
+
+
+
+
+
+<div class="container">
+  <h1 class="my-12">Book List</h1>
+  <a routerLink="/create" class="btn btn-primary mb-3">Create Book</a>
+  <button mat-raised-button color="primary" (click)="downloadDataAsExcel()">Download Excel</button>
+  <mat-progress-spinner mode="indeterminate" diameter="32" *ngIf="isLoading"></mat-progress-spinner>
+
+  <mat-table class="mat-elevation-z8" [dataSource]="dataSource" *ngIf="!isLoading">
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+      <mat-cell *matCellDef="let book">{{ book.Title }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="author">
+      <mat-header-cell *matHeaderCellDef>Author</mat-header-cell>
+      <mat-cell *matCellDef="let book">{{ book.Author }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+      <mat-cell *matCellDef="let book">{{ book.Description }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
+      <mat-cell *matCellDef="let book">
+        <button mat-raised-button color="primary" (click)="openDialog(book)">Edit</button>
+        <button mat-raised-button color="warn" [routerLink]="['/delete', book.Id]">Delete</button>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="['title', 'author','description', 'actions']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['title', 'author','description', 'actions'];"></mat-row>
+  </mat-table>
+
+
+  <mat-paginator [length]="books.length"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 [showFirstLastButtons]="true"
+                 aria-label="Select page"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
+

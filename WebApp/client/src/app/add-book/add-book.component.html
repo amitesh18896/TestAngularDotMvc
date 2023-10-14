@@ -1,0 +1,39 @@
+
+
+
+
+
+<mat-dialog-content>
+  <h1>Add New Book</h1>
+  <div class="row">
+    <div class="container">
+      <div class="col-md-6">
+        <form (ngSubmit)="createBook()" #bookForm="ngForm">
+          <mat-form-field class="form-group">
+            <mat-label>Title</mat-label>
+            <input matInput [(ngModel)]="book.Title" name="Title" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-group">
+            <mat-label>Author</mat-label>
+            <input matInput [(ngModel)]="book.Author" name="Author" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-group">
+            <mat-label>Description</mat-label>
+            <input matInput [(ngModel)]="book.Description" name="Description" required>
+          </mat-form-field>
+
+          <mat-form-field class="form-group">
+            <mat-label>Published Year</mat-label>
+            <input matInput [(ngModel)]="book.PublishedOn" name="PublishedOn" required>
+          </mat-form-field>
+
+          <div class="form-group">
+            <button type="submit" mat-raised-button color="primary" [disabled]="!bookForm.form.valid">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>

@@ -1,0 +1,79 @@
+/* Style the dialog content */
+mat-dialog-content {
+  text-align: center;
+}
+
+/* Style the heading */
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+/* Style the form container */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color:paleturquoise;
+}
+
+/* Style the form fields and labels */
+.mat-form-field {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.mat-label {
+  font-weight: bold;
+}
+
+/* Style the form input fields */
+input.matInput {
+  width: 100%;
+}
+
+/* Style the form buttons */
+.form-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button.mat-raised-button {
+  width: 150px;
+  font-weight: bold;
+}
+
+  /* Disable button when the form is not valid */
+  button.mat-raised-button[disabled] {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  border-top-color: #000000;
+  animation: spinner .8s linear infinite;
+}
